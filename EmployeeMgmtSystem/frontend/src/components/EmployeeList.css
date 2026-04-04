@@ -1,0 +1,146 @@
+.table-container {
+  overflow-x: auto;
+  border-radius: var(--border-radius-md);
+}
+
+.employee-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.employee-table th, .employee-table td {
+  padding: 1.25rem 1rem;
+}
+
+.employee-table th {
+  background-color: rgba(0, 0, 0, 0.3);
+  font-weight: 600;
+  color: var(--text-secondary);
+  border-bottom: 1px solid var(--border-color);
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+}
+
+.employee-table tr {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.3s ease;
+}
+
+.employee-table tr:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+.employee-table tr:hover {
+  background-color: rgba(59, 130, 246, 0.15); /* Accent highlight */
+  transform: scale(1.01);
+}
+
+.employee-table td {
+  color: var(--text-primary);
+  font-size: 0.95rem;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+}
+
+.icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.icon-btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.icon-btn.edit {
+  background: rgba(99, 102, 241, 0.12);
+  color: #818cf8;
+  border: 1px solid rgba(99, 102, 241, 0.25);
+}
+
+.icon-btn.edit::before {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+}
+
+.icon-btn.edit:hover {
+  color: white;
+  border-color: transparent;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(99, 102, 241, 0.4);
+}
+
+.icon-btn.edit:hover::before {
+  opacity: 1;
+}
+
+.icon-btn.edit > svg {
+  position: relative;
+  z-index: 1;
+}
+
+.icon-btn.delete {
+  background: rgba(239, 68, 68, 0.08);
+  color: #f87171;
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.icon-btn.delete::before {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+}
+
+.icon-btn.delete:hover {
+  color: white;
+  border-color: transparent;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(239, 68, 68, 0.35);
+}
+
+.icon-btn.delete:hover::before {
+  opacity: 1;
+}
+
+.icon-btn.delete > svg {
+  position: relative;
+  z-index: 1;
+}
+
+.icon-btn:active {
+  transform: translateY(0) scale(0.95);
+}
+
+.empty-state {
+  padding: 3rem 1rem;
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+.dept-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  background: rgba(59, 130, 246, 0.15);
+  color: #60a5fa;
+  border: 1px solid rgba(59, 130, 246, 0.3);
+}

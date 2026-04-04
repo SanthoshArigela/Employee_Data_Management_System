@@ -1,0 +1,62 @@
+.chart-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(2, 6, 23, 0.8);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  padding: 2rem;
+  animation: fadeIn 0.25s ease-out;
+}
+
+.chart-modal {
+  width: 100%;
+  max-width: 760px;
+  padding: 2.5rem;
+  animation: slideUp 0.3s ease-out;
+  border: 1px solid rgba(139, 92, 246, 0.2);
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(30px) scale(0.97); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.chart-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+
+.chart-modal-header h2 {
+  font-size: 1.5rem;
+  margin: 0 0 0.25rem;
+}
+
+.chart-modal-header p {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.chart-body {
+  width: 100%;
+}
+
+.chart-tooltip {
+  background: rgba(15, 23, 42, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+  pointer-events: none;
+}
+
+.tooltip-label {
+  color: #cbd5e1;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
