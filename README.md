@@ -1,5 +1,4 @@
------EMPLOYEE DATA MANAGEMENT SYSTEM-------
-
+#EMPLOYEE DATA MANAGEMENT SYSTEM
 This repository is attached the following files:
   1. Project Documentation (.docx)
   2. Project Presentation (.pptx)
